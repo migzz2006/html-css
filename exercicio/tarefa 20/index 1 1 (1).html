@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Primeira Página</title>
+  <link rel="stylesheet" href="style.css">
+  <style> h1 { text-decoration: underline; } </style>
+</head>
+<body>
+
+  <h1>Site de Exemplo</h1>
+  <h2>Primeira página</h2>
+
+  <p>Este é um exemplo de site com duas páginas que utilizam o mesmo ficheiro de estilos externo em CSS.</p>
+
+  <p style="text-align: left; max-width:500px;">
+    Este parágrafo está alinhado à direita usando um estilo inline apenas nesta página.
+  </p>
+
+  <!-- Link robusto para ir à pagina2 -->
+  <a href="pagina2.html" id="linkParaPagina2">Ir para a segunda página</a>
+
+  <script>
+    // Força navegação caso o clique nativo falhe por algum motivo
+    document.getElementById('linkParaPagina2').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.href = 'pagina2.html';
+    });
+  </script>
+
+</body>
+</html>
